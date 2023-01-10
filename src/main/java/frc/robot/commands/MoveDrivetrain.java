@@ -5,25 +5,15 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.Constants.DrivetrainConstants;
 import frc.robot.subsystems.Drivetrain;
-import edu.wpi.first.wpilibj.XboxController; 
 
+public class MoveDrivetrain extends CommandBase {
+  
+  private final Drivetrain m_drivetrain;
 
-public class MDrivetrain extends CommandBase {
-  
-
-
-  public MDrivetrain() {
-  
-    private final Drivetrain m_drivetrain;
-    private final XboxController m_controller = Robot.getDrivetrainController();
-  
-    public MoveDrivetrain(Drivetrain drivetrain) {
-      this.m_drivetrain = drivetrain;
-      addRequirements(drivetrain);
-    }
-  
+  public MoveDrivetrain(Drivetrain drivetrain) {
+    this.m_drivetrain = drivetrain;
+    addRequirements(drivetrain);
   }
 
   // Called when the command is initially scheduled.
